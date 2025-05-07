@@ -1,0 +1,419 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CV Darul Nadwah Pulungan
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+     font-family: "Inter", sans-serif;
+   }
+   /* Equal height for all list items */
+   .personal-list li {
+     min-height: 2.5rem; /* Adjust as needed for equal vertical spacing */
+     display: flex;
+     align-items: center;
+   }
+   a {
+     text-decoration: none;
+     color: #2c3e50;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+   }
+   a:hover {
+     text-decoration: underline;
+   }
+   .icon {
+     width: 1rem;
+     height: 1rem;
+   }
+   /* Add consistent vertical spacing between main sections */
+   main section {
+     margin-bottom: 3rem;
+   }
+   /* Align year containers vertically center */
+   .education-item,
+   .work-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   .education-year,
+   .work-year {
+     flex-shrink: 0;
+     font-weight: 600;
+     color: #3a5a8a;
+     font-size: 0.75rem; /* text-xs */
+     line-height: 1rem; /* leading-4 */
+   }
+   .education-details,
+   .work-details {
+     flex-grow: 1;
+     margin-right: 1rem;
+     font-size: 0.875rem; /* text-sm */
+     line-height: 1.25rem; /* leading-5 */
+   }
+   /* Skill circle container */
+   .skill-item {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 0.75rem;
+     max-width: 320px;
+     font-size: 0.875rem; /* text-sm */
+   }
+   .skill-name {
+     flex-shrink: 0;
+     width: 110px;
+     color: #2c3e50;
+   }
+   .skill-circles {
+     display: flex;
+     gap: 0.5rem;
+     flex-grow: 1;
+   }
+   .skill-circle {
+     width: 1.25rem;
+     height: 1.25rem;
+     border-radius: 9999px;
+     background-color: #2c3e50;
+   }
+   .skill-circle.inactive {
+     background-color: #d1d5db; /* gray-300 */
+   }
+   ul.skill-list {
+     list-style: none;
+     padding-left: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+   }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row bg-white border border-gray-200">
+   <!-- Left Sidebar -->
+   <aside class="bg-[#3a5a8a] md:w-80 flex-shrink-0 flex flex-col items-center text-center text-white p-6">
+<img src="foto.jpg" alt="Foto Darul Nadwah Pulungan" class="w-32 h-32 rounded-full object-cover mb-4"/>
+
+    <h1 class="font-semibold text-lg leading-tight">
+     Darul Nadwah Pulungan
+    </h1>
+    <p class="text-sm mt-1 mb-6 font-light">
+     Curriculum Vitae
+    </p>
+    <div class="w-full text-left">
+     <h2 class="text-xl font-light mb-3 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('personalDetailsList')">
+      Personal Details
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-personalDetailsList"></i>
+     </h2>
+     <ul class="personal-list space-y-3 text-sm font-light" id="personalDetailsList">
+      <li class="flex items-center gap-3">
+       <i class="fas fa-user text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>Darul Nadwah Pulungan</span>
+      </li>
+      <li class="flex items-center gap-3">
+       <i class="fas fa-home text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>Garu III No. 13 H, Medan Amplas</span>
+      </li>
+      <li class="flex items-center gap-3">
+       <i class="fas fa-calendar-alt text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>August 21, 2005</span>
+      </li>
+      <li class="flex items-center gap-3">
+       <i class="fas fa-map-marker-alt text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>Medan</span>
+      </li>
+      <li class="flex items-center gap-3">
+       <i class="fas fa-male text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>Male</span>
+      </li>
+      <li class="flex items-center gap-3">
+       <i class="fas fa-users text-[#2c3e50] w-5 flex-shrink-0"></i>
+       <span>Single</span>
+      </li>
+     </ul>
+    </div>
+    <div class="w-full mt-6 text-left">
+     <h2 class="text-xl font-light mb-3 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('contactContent')">
+      Contact Me
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-contactContent"></i>
+     </h2>
+     <div class="text-xs font-normal space-y-2" id="contactContent">
+      <p>
+       <a href="https://instagram.com/drlndwh" target="_blank" aria-label="Open Instagram profile" class="underline">
+        <i class="fab fa-instagram icon"></i> Instagram
+       </a>
+      </p>
+      <p>
+       <a href="https://wa.me/0882016232866" target="_blank" aria-label="Chat on WhatsApp" class="underline">
+        <i class="fab fa-whatsapp icon"></i> WhatsApp
+       </a>
+      </p>
+      <p>
+       <a href="mailto:darulnadwah21@gmail.com" class="underline" aria-label="Send email">
+        <i class="fas fa-envelope icon"></i> Email
+       </a>
+      </p>
+     </div>
+    </div>
+   </aside>
+   <!-- Right Content -->
+   <main class="flex-1 p-8 text-[#3a5a8a]">
+    <section>
+     <h2 class="text-2xl font-light mb-2 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('aboutMeContent')">
+      About Me
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-aboutMeContent"></i>
+     </h2>
+     <p class="text-xs font-normal text-gray-900 leading-relaxed" id="aboutMeContent">
+      Active student at Information Technology Study Program, Muhammadiyah University of North Sumatra (UMSU), class of 2024. Graduate of MAN 1 Medan majoring in Mathematics and Natural Sciences in 2023 with an average score of 92.68. Experienced in store management and cashier positions with proven ability to build strong customer relationships and achieve sales targets. Equipped with skills in identifying market opportunities, analyzing customer needs, and developing effective sales strategies. Capable of adapting to work environments both individually and in group settings.
+     </p>
+    </section>
+    <section>
+     <h2 class="text-2xl font-light mb-2 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('educationContent')">
+      Education
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-educationContent"></i>
+     </h2>
+     <div class="space-y-6" id="educationContent">
+      <div class="education-item">
+       <div class="education-details text-xs font-normal">
+        <p class="font-bold">
+         Junior High School / Equivalent
+        </p>
+        <p class="text-[#6b7280]">
+         Madrasah Tsanawiyah Swasta Guppi, Medan
+        </p>
+        <p>
+         Average Score 90.9
+        </p>
+       </div>
+       <div class="education-year">
+        2017 - 2020
+       </div>
+      </div>
+      <div class="education-item">
+       <div class="education-details text-xs font-normal">
+        <p class="font-bold">
+         High School / Equivalent
+        </p>
+        <p class="text-[#6b7280]">
+         Madrasah Aliyah Negeri 1, Medan
+        </p>
+        <p>
+         <span class="font-bold">
+          Science Major
+         </span>
+         | Average Score 92.68
+        </p>
+        <p>
+         Participated in UKS and PIK -R Extracurricular Activities
+        </p>
+       </div>
+       <div class="education-year">
+        2020 - 2023
+       </div>
+      </div>
+     </div>
+    </section>
+    <section>
+     <h2 class="text-2xl font-light mb-8 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('workExperienceContent')">
+      Work Experience
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-workExperienceContent"></i>
+     </h2>
+     <div class="space-y-6" id="workExperienceContent">
+      <div class="work-item text-xs font-normal">
+       <div class="work-details">
+        <p class="font-bold">
+         Store Employee
+        </p>
+        <p class="text-[#6b7280]">
+         Toko Darwis, Medan,
+         <span class="underline cursor-pointer">
+          North Sumatra
+         </span>
+        </p>
+        <ul class="list-disc list-inside mt-1 space-y-0.5">
+         <li>
+          Maintain Cleanliness of Sales Area
+         </li>
+         <li>
+          Provide Service to more than 7 people
+         </li>
+         <li>
+          Organize Product Storage Locations
+         </li>
+         <li>
+          Conduct Stock Checks
+         </li>
+        </ul>
+       </div>
+       <div class="work-year">
+        Mar 2023 - Aug 2023
+       </div>
+      </div>
+      <div class="work-item text-xs font-normal">
+       <div class="work-details">
+        <p class="font-bold">
+         Cashier and Waiter
+        </p>
+        <p class="text-[#6b7280]">
+         Umegashi, Komp. CBD Polonia Blok F88, Medan
+        </p>
+        <ul class="list-disc list-inside mt-1 space-y-0.5">
+         <li>
+          Provide Service to 15-20 Buyers
+         </li>
+         <li>
+          Prepare Financial Reports when Closing the Store
+         </li>
+         <li>
+          Maintain Cleanliness of Sales Area
+         </li>
+         <li>
+          Promote products to buyers
+         </li>
+         <li>
+          Arrange cakes before delivery to buyers
+         </li>
+        </ul>
+       </div>
+       <div class="work-year">
+        Sep 2023 - Present
+       </div>
+      </div>
+     </div>
+    </section>
+    <section>
+     <h2 class="text-2xl font-light mb-8 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('organizationContent')">
+      Organization
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-organizationContent"></i>
+     </h2>
+     <div class="flex justify-between text-xs font-normal" id="organizationContent">
+      <div>
+       <p class="font-bold">
+        Vice Chairman of UKS
+       </p>
+       <p class="text-[#6b7280]">
+        UKS MAN 1, Medan
+       </p>
+       <ul class="list-disc list-inside mt-1 space-y-0.5">
+        <li>
+         Organized GerMANSA with other divisions for school cleanliness
+        </li>
+        <li>
+         Conducted urine testing with BBN SUMUT as part of MATSAMA
+        </li>
+        <li>
+         Organized Field Practice for Youth Doctors in Sibolangit.
+        </li>
+       </ul>
+      </div>
+      <div class="text-[#3a5a8a] font-semibold">
+       2021 - 2022
+      </div>
+     </div>
+    </section>
+    <section>
+     <h2 class="text-2xl font-light mb-2 border-b border-gray-300 pb-1 cursor-pointer select-none" onclick="toggleSection('skillsContent')">
+      Skills
+      <i class="fas fa-chevron-down float-right mt-1" id="icon-skillsContent"></i>
+     </h2>
+     <div class="text-xs font-normal space-y-4" id="skillsContent">
+      <div class="skill-item">
+       <span class="skill-name">VS Code</span>
+       <div class="skill-circles">
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle inactive"></span>
+        <span class="skill-circle inactive"></span>
+       </div>
+      </div>
+      <div class="skill-item">
+       <span class="skill-name">Python</span>
+       <div class="skill-circles">
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle inactive"></span>
+        <span class="skill-circle inactive"></span>
+       </div>
+      </div>
+      <div class="skill-item">
+       <span class="skill-name">C++</span>
+       <div class="skill-circles">
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle inactive"></span>
+        <span class="skill-circle inactive"></span>
+       </div>
+      </div>
+      <div class="skill-item">
+       <span class="skill-name">Microsoft Word</span>
+       <div class="skill-circles">
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle inactive"></span>
+       </div>
+      </div>
+      <div class="skill-item">
+       <span class="skill-name">Microsoft PowerPoint</span>
+       <div class="skill-circles">
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle"></span>
+        <span class="skill-circle inactive"></span>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script>
+   function toggleSection(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      if (!content || !icon) return;
+
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-down');
+      } else {
+        content.style.display = 'none';
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-right');
+      }
+    }
+
+    // Initialize all sections as hidden except Personal Details and About Me
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = ['personalDetailsList', 'contactContent', 'aboutMeContent', 'educationContent', 'workExperienceContent', 'organizationContent', 'skillsContent'];
+      sections.forEach(id => {
+        const content = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        if (!content || !icon) return;
+        if (id === 'personalDetailsList' || id === 'aboutMeContent') {
+          content.style.display = 'block';
+          icon.classList.remove('fa-chevron-right');
+          icon.classList.add('fa-chevron-down');
+        } else {
+          content.style.display = 'none';
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-right');
+        }
+      });
+    });
+  </script>
+ </body>
+</html>
